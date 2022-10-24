@@ -5,22 +5,25 @@
   <style>
   body {
     font-family: 'Trebuchet MS', sans-serif;
+	width: 50%;
   }
   figure {
     display: table;
-  }
-  img {
-    width: 250px;
   }
   figcaption {
     display: table-caption;
     caption-side: bottom;
   }
-  .left {
-	float: left;
+  .container {
+	display: flex;
+	margin: 20px;
   }
-  .right {
-	float: right;
+  p, ul {
+    font-size: 20px;
+	margin: 40px;
+  }
+  .container:nth-of-type(even) {
+    flex-direction: row-reverse;
   }
   .vcenter {
 	margin: 0;
@@ -31,33 +34,36 @@
 </head>
 <body>
   <h1>Ulysses Foote-McNabb</h1>
-  <h2>Biochemistry, Programming</h2>
-  <div>
-    <figure class="left">
-	  <img src="alaskahike.jpg" alt="Hiking in Alaska">
+  <h2>Biochemistry and Computer Science</h2>
+  <div class="container">
+    <figure>
+	  <img src="alaskahike.jpg" alt="Hiking in Alaska" style="width: 280px">
 	  <figcaption>Hiking in Ketchikan, AK</figcaption>
 	</figure>
-    <ul class="vcenter">
-	  <h3>Personal Links</h3>
-      <li><a href="mailto:me@uly.fm">me@uly.fm</a></li>
+    <ul>
+	  <h3>Links</h3>
+      <li>Email: <a href="mailto:me@uly.fm">me@uly.fm</a></li>
       <li><a href="https://www.linkedin.com/in/ufm/">LinkedIn</a></li>
       <li><a href="https://github.com/ulyfm">GitHub</a></li>
-      <li><a href="/ulysses.pdf">Resume (PDF)</a></li>
+      <li><a href="ulysses.pdf">Resume (PDF)</a></li>
     </ul>
   </div>
-  <div>
-    <figure class="right">
-      <img src="snakevenom.png" alt="Snake Antivenom Binding Locations">
+  <div class="container">
+    <figure>
+      <img src="snakevenom.png" alt="Snake Antivenom Binding Locations" style="width: 400px">
       <figcaption>Plot of predicted antivenom binding locations on Indian Cobra phospholipase A2 enzyme (using BioPython, AlphaFold).</figcaption>
     </figure>
-    <p>I am Ulysses. I am currently working as a research technician at the Fred Hutchinson Cancer Center in a crystallography lab.
-    At the same time, I am studying for a BS in Computer Science at Bellevue College. I am working on developing new drugs to
-    treat tropical diseases, using biochemical techniques in addition to computer modeling (e.g. with AlphaFold).
+    <p>I am a research technician at the Fred Hutchinson Cancer Center in <a href="https://research.fredhutch.org/strong/en.html">Roland Strong's crystallography lab</a>.
+    I'm also studying for a BS in Computer Science at Bellevue College. In the lab, I work on developing new drugs to
+    treat tropical diseases, using biochemical techniques in addition to computer modeling.
     I am particularly interested in treating snakebites, recognized by the WHO as a neglected tropical disease.</p>
   </div>
-  <figure class="left">
-    <img src="englandhike.jpg" alt="Hiking in England">
-    <figcaption>Hiking in England, UK</figcaption>
-  </figure>
+  <div class="container">
+    <figure>
+      <img src="englandhike.jpg" alt="Hiking in England" style="width: 400px">
+      <figcaption>Hiking in England</figcaption>
+    </figure>
+	<p>In my spare time, I enjoy hiking. I also have a couple scientific side projects going. Recently, I worked on <a href="https://devpost.com/software/tomatoai">this project</a> at DubHacks 2022 (UW's hackathon).</a></p>
+  </div>
 </body>
 </html>
